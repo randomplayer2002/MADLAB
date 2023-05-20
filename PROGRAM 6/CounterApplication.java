@@ -1,4 +1,4 @@
-{
+public class MainActivity extends AppCompatActivity {
     Button btnstart,btnstop,btnclr;
     TextView tv;
     int i=1;
