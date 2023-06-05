@@ -13,8 +13,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 EditText inputEditText;
 RadioButton inputRadioMeter,inputRadioCentemeter,inputRadioFeet;
-    RadioButton outputRadioMeter,outputRadioCentemeter,outputRadioFeet;
-    TextView tv;
+RadioButton outputRadioMeter,outputRadioCentemeter,outputRadioFeet;
+TextView tv;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
