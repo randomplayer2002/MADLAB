@@ -37,7 +37,7 @@ TextView tv;
         });
     }
     public void convertUnits(){
-        String inputStr=inputEditText.getText().toString().trim();
+        String inputStr=inputEditText.getText().toString().trim();    //Trim(): Returns the copy of the string where Leading and Trailing white spaces are omitted.
         if (TextUtils.isEmpty(inputStr)){
             tv.setText("Enter a value to convert");
             return;
