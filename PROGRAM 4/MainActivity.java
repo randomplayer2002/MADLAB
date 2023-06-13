@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 EditText inputEditText;
-RadioButton inputRadioMeter,inputRadioCentemeter,inputRadioFeet;
-RadioButton outputRadioMeter,outputRadioCentemeter,outputRadioFeet;
+RadioButton inputRadioMeter,inputRadioCentimeter,inputRadioFeet;
+RadioButton outputRadioMeter,outputRadioCentimeter,outputRadioFeet;
 TextView tv;
     
     @Override
@@ -22,10 +22,10 @@ TextView tv;
         setContentView(R.layout.activity_main);
         inputEditText=findViewById(R.id.editText);
         inputRadioMeter=findViewById(R.id.inputRadioMeter);
-        inputRadioCentemeter=findViewById(R.id.inputRadioCentemeter);
+        inputRadioCentimeter=findViewById(R.id.inputRadioCentimeter);
         inputRadioFeet=findViewById(R.id.inputRadioFeet);
         outputRadioMeter=findViewById(R.id.outputRadioMeter);
-        outputRadioCentemeter=findViewById(R.id.outputRadioCentemeter);
+        outputRadioCentimeter=findViewById(R.id.outputRadioCentimeter);
         outputRadioFeet=findViewById(R.id.outputRadioFeet);
         tv=findViewById(R.id.textView2);
         Button convert=findViewById(R.id.button);
@@ -44,13 +44,13 @@ TextView tv;
         }
         double inputValue=Double.parseDouble(inputStr);
         double Meter = 0;
-        double Centemeter = 0;
+        double Centimeter = 0;
         double Feet = 0;
         if (inputRadioMeter.isChecked()){
             Meter=inputValue;
         }
         else if (inputRadioCentemeter.isChecked()){
-            Centemeter=inputValue;
+            Centimeter=inputValue;
         }
         else if (inputRadioFeet.isChecked()){
             Feet=inputValue;
@@ -59,8 +59,8 @@ TextView tv;
             if (Meter>0){
                 tv.setText(String.format("%.2f Meters",Meter));
             }
-            else if (Centemeter>0){
-                Meter=Centemeter/100.0;
+            else if (Centimeter>0){
+                Meter=Centimeter/100.0;
                 tv.setText(String.format("%.2f Meters",Meter));
             }
             else if (Feet>0){
@@ -69,17 +69,17 @@ TextView tv;
             }
         }
 
-        if (outputRadioCentemeter.isChecked()){
-            if (Centemeter>0){
-                tv.setText(String.format("%.2f Centemeters",Centemeter));
+        if (outputRadioCentimeter.isChecked()){
+            if (Centimeter>0){
+                tv.setText(String.format("%.2f Centimeters",Centimeter));
             }
             else if (Meter>0){
-               Centemeter=Meter*100.0;
-                tv.setText(String.format("%.2f Centemeters",Centemeter));
+               Centimeter=Meter*100.0;
+                tv.setText(String.format("%.2f Centimeters",Centimeter));
             }
             else if (Feet>0){
-                Centemeter=(Feet*100)/3.2808;
-                tv.setText(String.format("%.2f Centemeters",Centemeter));
+                Centimeter=(Feet*100)/3.2808;
+                tv.setText(String.format("%.2f Centimeters",Centimeter));
             }
         }
         if (outputRadioFeet.isChecked()){
@@ -91,7 +91,7 @@ TextView tv;
                 tv.setText(String.format("%.2f Feets",Feet));
             }
             else if (Centemeter>0){
-                Feet=(Centemeter*3.2808)/100;
+                Feet=(Centimeter*3.2808)/100;
                 tv.setText(String.format("%.2f Feets",Feet));
             }
         }
