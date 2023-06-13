@@ -40,11 +40,11 @@
             android:text="Meter" />
 
         <RadioButton
-            android:id="@+id/inputRadioCentemeter"
+            android:id="@+id/inputRadioCentimeter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cntemeter" />
+            android:text="Centimeter" />
 
         <RadioButton
             android:id="@+id/inputRadioFeet"
@@ -98,11 +98,11 @@
             android:text="Meter" />
 
         <RadioButton
-            android:id="@+id/outputRadioCentemeter"
+            android:id="@+id/outputRadioCentimeter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Centemeter" />
+            android:text="Centimeter" />
 
         <RadioButton
             android:id="@+id/outputRadioFeet"
