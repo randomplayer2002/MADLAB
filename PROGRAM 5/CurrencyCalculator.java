@@ -24,7 +24,7 @@ TextView tv;
         String inputCurrency=inputSpinner.getSelectedItem().toString();
         String outputCurrency=outputSpinner.getSelectedItem().toString();
         double inputAmount=Double.parseDouble(inputEditText.getText().toString());
-        Double usdAmount=0.0;
+        double usdAmount=0.0;
         switch (inputCurrency){
             case "USD":
                 usdAmount=inputAmount;
