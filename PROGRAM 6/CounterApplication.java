@@ -1,5 +1,5 @@
 public class MainActivity extends AppCompatActivity {
-    Button btnstart,btnstop,btnclr;
+    Button btnstart,btnstop;
     TextView tv;
     int i=1;
     Handler custmHander=new Handler();
