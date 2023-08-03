@@ -9,22 +9,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnstart=findViewById(R.id.button1);
         btnstop=findViewById(R.id.button2);
-
         tv=findViewById(R.id.textView);
+        
         btnstart.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 custmHander.postDelayed(updateTimerThread,0);
-
             }
         });
 
         btnstop.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 custmHander.removeCallbacks(updateTimerThread);
-
             }
         });
     }
+    
     private final Runnable updateTimerThread =new Runnable() {
         @Override
         public void run() {
@@ -33,6 +32,4 @@ public class MainActivity extends AppCompatActivity {
             i++;
         }
     };
-
-
 }
