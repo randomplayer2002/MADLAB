@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     
-    private final Runnable updateTimerThread =new Runnable() {
+    private final Runnable updateTimerThread = new Runnable() {
         @Override
         public void run() {
             tv.setText("" + i);
